@@ -3,22 +3,27 @@ import Vurl from "../Images/approved.png";
 import Vtext from "../Images/clipboard.png";
 import Vimage from "../Images/camera.png";
 import Vbarcode from "../Images/barcode.jpg";
+import { Link } from "react-router-dom";
 
 const VerificationMethods = () => {
   const methods = [
     {
+      path:"/verification/urlform",
       img: Vurl,
       text: "Url Verification",
     },
     {
+      path:"/verification/mannualform",
       img: Vtext,
       text: "Manual Verification",
     },
     {
+      path:"/verification/media",
       img: Vimage,
       text: "Image Verification",
     },
     {
+      path:"/verification/barcode",
       img: Vbarcode,
       text: "Barcode Verification",
     },
