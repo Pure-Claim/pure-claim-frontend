@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import VerificationMethods from "./components/VerificationMethods";
+import "./App.css";
 
 function App() {
   const [showVerificationMethods, setShowVerificationMethods] = useState(false);
@@ -15,7 +16,7 @@ function App() {
     <div className="container-fluid">
       <Header />
 
-      <div> 
+      <div>
         {/* Conditionally render either the Home or VerificationMethods */}
         {!showVerificationMethods ? (
           <Home onGetStarted={handleGetStartedClick} />

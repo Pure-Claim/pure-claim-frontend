@@ -1,32 +1,38 @@
-import React from "react";
-import { Row, Col, Button } from "react-bootstrap";
+import VerificationCard from "./VerificationCard";
+import Vurl from "../Images/approved.png";
+import Vtext from "../Images/clipboard.png";
+import Vimage from "../Images/camera.png";
+import Vbarcode from "../Images/barcode.jpg";
 
 const VerificationMethods = () => {
+  const methods = [
+    {
+      img: Vurl,
+      text: "Url Verification",
+    },
+    {
+      img: Vtext,
+      text: "Manual Verification",
+    },
+    {
+      img: Vimage,
+      text: "Image Verification",
+    },
+    {
+      img: Vbarcode,
+      text: "Barcode Verification",
+    },
+  ];
+
   return (
-    <section className="verification-methods text-center">
-      <h2>Select Verification Method</h2>
-      <Row className="justify-content-center">
-        <Col xs={12} md={3} className="my-2">
-          <Button variant="outline-primary" size="lg" block>
-            URL
-          </Button>
-        </Col>
-        <Col xs={12} md={3} className="my-2">
-          <Button variant="outline-primary" size="lg" block>
-            Manual
-          </Button>
-        </Col>
-        <Col xs={12} md={3} className="my-2">
-          <Button variant="outline-primary" size="lg" block>
-            Barcode
-          </Button>
-        </Col>
-        <Col xs={12} md={3} className="my-2">
-          <Button variant="outline-primary" size="lg" block>
-            Media
-          </Button>
-        </Col>
-      </Row>
+    <section className="VerificationMethods text-center">
+      <h2 className="Heading">Select Verification Method</h2>
+
+      <div className="cardContainer">
+        {methods.map((item) => (
+          <VerificationCard key={item} val={item} />
+        ))}
+      </div>
     </section>
   );
 };
