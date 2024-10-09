@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/Header";
-import Home from "./components/Home";
-import VerificationMethods from "./components/VerificationMethods";
+import Header from "./Components/Header";
+import Home from "./Components/Home";
+import VerificationMethods from "./Components/VerificationMethods";
 
 function App() {
   const [showVerificationMethods, setShowVerificationMethods] = useState(false);
