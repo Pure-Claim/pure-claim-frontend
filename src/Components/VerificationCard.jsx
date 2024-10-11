@@ -7,7 +7,7 @@ function VerificationCard({ val }) {
       </div>
       <Link
         to={val.path}
-        className="cardContent btn btn-outline-secondary w-75 mx-auto">
+        className="cardContent btn btn-outline-secondary w-75 mx-auto mb-2">
         {" "}
         {val.text}
       </Link>

@@ -3,8 +3,6 @@ import Vurl from "../Images/approved.png";
 import Vtext from "../Images/clipboard.png";
 import Vimage from "../Images/camera.png";
 import Vbarcode from "../Images/barcode.jpg";
-import { Link } from "react-router-dom";
-
 const VerificationMethods = () => {
   const methods = [
     {
