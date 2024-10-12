@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+import Card from "./Card"
 
 const MediaPicker = () => {
   const [mediaFile, setMediaFile] = useState(null);
@@ -14,10 +15,12 @@ const MediaPicker = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <Card>
+    <form onSubmit={handleSubmit} className="d-flex flex-column mx-auto my-auto gap-5 ">
       <input type="file" onChange={handleMediaChange} />
-      <button type="submit">Submit</button>
+      <button type="submit" className="btn btn-success w-50">Submit</button>
     </form>
+    </Card>
   );
 };
 

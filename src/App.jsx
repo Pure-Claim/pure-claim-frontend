@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import VerificationMethods from "./components/VerificationMethods";
 import URLForm from "./components/VerificationMethod/URLForm";
 import BarcodeScanner from "./components/VerificationMethod/BarcodeScanner";
-import ManualForm from "./components/VerificationMethod/ManualForm";
+import ManualForm from "./Components/VerificationMethod/MannualForm";
 import MediaPicker from "./components/VerificationMethod/MediaPicker";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Switch to BrowserRouter
@@ -22,7 +22,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/verification" element={<VerificationMethods />} />
           <Route path="/verification/urlform" element={<URLForm />} />
-          <Route path="/verification/manualform" element={<ManualForm />} />
+          <Route path="/verification/mannualform" element={<ManualForm />} />
           <Route path="/verification/media" element={<MediaPicker />} />
           <Route path="/verification/barcode" element={<BarcodeScanner />} />
         </Routes>

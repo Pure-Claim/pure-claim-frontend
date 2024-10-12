@@ -1,6 +1,7 @@
 import { Navbar, Nav } from "react-bootstrap";
 import ReactLogo from "../Images/Home - Copy.jpeg";
 import { Link } from "react-router-dom";
+import "./VerificationMethod/Header.css"
 
 const Header = () => {
   return (
@@ -12,24 +13,25 @@ const Header = () => {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarNav" />
         <Navbar.Collapse id="navbarNav">
-          <Nav className="ms-auto nav-pills ">
+          <Nav className="ms-auto nav-pills  ">
             {/* React Router Link for internal navigation */}
-            <Nav.Link as={Link} to="/" className="btn btn-outline-success">
+            <Nav.Link as={Link} to="/" className="btn btn-outline-success navpill">
               Home
             </Nav.Link>
             <Nav.Link as={Link} to="/verification"
-            className="btn btn-outline-success"
+            className="btn btn-outline-success navpill"
             >
               Verification
             </Nav.Link>
 
             {/* Example external link (keeps href) */}
             <Nav.Link as={Link} to="/"
-            className="btn btn-outline-success">
+            className="btn btn-outline-success navpill">
               About Us
             </Nav.Link>
             <Nav.Link as={Link} to="/"
-            className="btn btn-outline-success">
+            className="btn btn-outline-success navpill" 
+            >
               Contact Us
             </Nav.Link>
           </Nav>
