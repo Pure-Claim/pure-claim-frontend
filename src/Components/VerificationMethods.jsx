@@ -28,10 +28,10 @@ const VerificationMethods = () => {
   ];
 
   return (
-    <section className="VerificationMethods text-center">
+    <section className="VerificationMethods text-center ">
       <h2 className="Heading">Select Verification Method</h2>
 
-      <div className="cardContainer">
+      <div className="cardContainer ">
         {methods.map((item) => (
           <VerificationCard key={item} val={item} />
         ))}
