@@ -1,8 +1,10 @@
 import React from "react";
 import { Form, Button, Row, Col } from "react-bootstrap";
+import Card from "./Card";
 
 const URLInput = () => {
   return (
+    <Card>
     <section className="url-input text-center">
       <h3>Enter Product URL</h3>
       <Form>
@@ -13,11 +15,12 @@ const URLInput = () => {
             </Form.Group>
           </Col>
         </Row>
-        <Button variant="primary" type="submit">
+        <Button variant="success" type="submit" className="mt-5 ">
           Submit
         </Button>
       </Form>
     </section>
+    </Card>
   );
 };
 

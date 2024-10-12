@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Card from "./Card";
 
 const ManualForm = () => {
   const [claims, setClaims] = useState("");
@@ -9,11 +10,13 @@ const ManualForm = () => {
     // Handle manual claim submission
     console.log("Claims:", claims);
     console.log("Ingredients:", ingredients);
-    
+
     alert(`Claims: ${claims}\nIngredients: ${ingredients}`); // Add an alert to confirm submission
   };
 
   return (
+    <Card>
+
     <form onSubmit={handleSubmit} className="w-50 mx-auto">
       <div className="mb-3">
         <label htmlFor="claimsInput" className="form-label">
@@ -26,7 +29,7 @@ const ManualForm = () => {
           placeholder="Enter Claims"
           value={claims}
           onChange={(e) => setClaims(e.target.value)}
-        />
+          />
       </div>
       <div className="mb-3">
         <label htmlFor="ingredientsInput" className="form-label">
@@ -39,12 +42,13 @@ const ManualForm = () => {
           placeholder="Enter Ingredients"
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
-        />
+          />
       </div>
-      <button type="submit" className="btn btn-primary">
+      <button type="submit" className="btn btn-success">
         Submit
       </button>
     </form>
+          </Card>
   );
 };
 
