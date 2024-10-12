@@ -1,13 +1,40 @@
-import { Navbar } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import ReactLogo from "../Images/Home - Copy.jpeg";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <Navbar bg="light" className="justify-content-between p-3 ">
-      <Navbar.Brand>
-        <img src={ReactLogo} alt="Logo" width="90" className=" align-top" />{" "}
-        <span className="fw-bolder">Pure-Claim</span>
-      </Navbar.Brand>
+    <Navbar bg="white" expand="lg" className="p-3">
+      <div className="container-fluid">
+        <Navbar.Brand as={Link} to="/">
+          <img src={ReactLogo} alt="Logo" width="90" className=" " />{" "}
+          <span className="fw-bolder mt-5">Pure-Claim</span>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarNav" />
+        <Navbar.Collapse id="navbarNav">
+          <Nav className="ms-auto nav-pills ">
+            {/* React Router Link for internal navigation */}
+            <Nav.Link as={Link} to="/" className="btn btn-outline-success">
+              Home
+            </Nav.Link>
+            <Nav.Link as={Link} to="/verification"
+            className="btn btn-outline-success"
+            >
+              Verification
+            </Nav.Link>
+
+            {/* Example external link (keeps href) */}
+            <Nav.Link as={Link} to="/"
+            className="btn btn-outline-success">
+              About Us
+            </Nav.Link>
+            <Nav.Link as={Link} to="/"
+            className="btn btn-outline-success">
+              Contact Us
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </div>
     </Navbar>
   );
 };
