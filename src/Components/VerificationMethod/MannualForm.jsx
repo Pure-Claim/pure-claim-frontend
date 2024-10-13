@@ -50,7 +50,7 @@ const ManualForm = () => {
   return (
     <>
       <Card>
-        <form onSubmit={handleSubmit} className="w-50 mx-auto">
+        <form onSubmit={handleSubmit} className="w-75 mx-auto">
           <div className="mb-3">
             <label htmlFor="claimsInput" className="form-label">
               Claims
